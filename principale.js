@@ -8,21 +8,21 @@ import AssetExample from './components/AssetExample';
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-elements'; // Version can be specified in package.json
-class trouverPrenom extends Component{
+class TrouverPrenom extends Component{
   render(){
     return(
-      <Text>Achille</Text>
+      <Text style={styles.paragraph}>Achille</Text>
       );
   }
 }
-class trouverNom extends Component{
+class TrouverNom extends Component{
   render(){
     return(
-      <Text>Baucher</Text>
+      <Text style={styles.paragraph}>Baucher</Text>
       );
   }
 }
-class trouverPhoto extends Component{
+class TrouverPhoto extends Component{
   render(){
     return(
       'https://randomuser.me/api/portraits/med/men/89.jpg'
@@ -37,9 +37,13 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.paragraph}>
-          <Text>aaa</Text>
-          Nom: Lamdbe 
+          Prenom:
         </Text>
+        <TrouverPrenom/>
+        <Text style={styles.paragraph}>
+          Nom:
+        </Text>
+        <TrouverNom/>
         <Image source={pic} style={{width: 72, height: 72}}/>
 
       </View>
