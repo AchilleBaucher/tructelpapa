@@ -15,6 +15,18 @@ class TrouverPrenom extends Component{
       );
   }
 }
+class TrouverGenre extends Component{
+  render(){
+    return fetch('https://randomuser.me/api/?results=10&gender=male')
+    .then((response) => response.json())
+    .then((responseJson) => {
+      return 'cbon?';
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  }
+}
 class TrouverNom extends Component{
   render(){
     return(
