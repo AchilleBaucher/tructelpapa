@@ -17,16 +17,19 @@ class TrouverPrenom extends Component{
 }
 class TrouverGenre extends Component{
   render(){
-    return fetch('https://randomuser.me/api/?results=10&gender=male')
-    .then((response) => response.json())
-    .then((responseJson) => {
-      return 'cbon?';
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+    fetch('https://facebook.github.io/react-native/movies.json')
+    .then(res => {
+      if (res.ok){
+         return res.json());
+        }
+      else throw new Error(res)
+    .then(json => {
+      return 
+      .catch(error => console.log(error)
+    }
   }
 }
+
 class TrouverNom extends Component{
   render(){
     return(
@@ -51,7 +54,6 @@ export default class App extends Component {
         <Text style={styles.paragraph}>
           Prenom:
         </Text>
-        <TrouverPrenom/>
         <Text style={styles.paragraph}>
           Nom:
         </Text>
